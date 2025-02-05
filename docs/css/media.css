@@ -1,0 +1,261 @@
+/* all less than 500px is the default */
+@media screen and (min-width: 450px) {
+    .nav-links {
+        width: 55%;
+    }
+    .home-section {
+        width: 85%;
+    }
+    .book-button, .watch-button {
+        display: inline-block;
+        margin-right: 20px;
+    } 
+}
+@media screen and (min-width: 600px) {
+    .nav-links {
+        width: 45%;
+    }
+    .home-section {
+        width: 75%;
+    }
+    .gallery-section .photos .photo {
+        width: 50%
+    }  
+    .gallery-section .photos {
+        height: 1200px;
+        column-gap: 20px;
+        flex-wrap: wrap;
+    }
+    .subscribe form input {
+        width: 80%;
+    }
+    .subscribe form button {
+        width: 19%;
+    }
+}
+@media screen and (min-width: 660px) {
+    .gallery-section .photos {
+        height: 1400px;
+    }
+}
+@media screen and (min-width: 750px) {
+    .nav-links {
+        width: 35%;
+    }
+    .home-section {
+        width: 85%;
+    }
+    .chefs-section .chefs-info {
+        padding-inline: 40px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .chefs-section .chefs-info .chef {
+        width: 48%;
+        margin: 0;
+    }
+    .gallery-section .photos {
+        height: 1600px;
+    }
+    .contact-info .info {
+        width: 49%;
+    }
+    footer .header-and-social, footer .get-in-touch{
+        width: 50%;
+    }
+    footer .subscribe {
+        width: 100%;
+    }
+    .header-and-social {
+        order: 1;
+    }
+    .get-in-touch {
+        order: 2;
+    }
+    .subscribe {
+        order: 3;
+    }
+}
+@media screen and (min-width: 880px) {
+    .gallery-section .photos {
+        height: 1800px;
+    }
+}
+@media screen and (min-width: 950px) {
+    .home-section {
+        width: 100%;
+    }
+    .home-section {
+        padding-inline: 40px;
+    }
+    .hero-image {
+        width: 45%;
+        float: right;
+    }
+    .welcome-message {
+        width: 45%;
+        float: left;
+        text-align: left;
+        transform: translateY(12%);
+    }
+    .home-buttons {
+        margin-left: 0;
+    }
+    .book-button a {
+        border-top-left-radius: 0px;
+        margin-left: 0;
+    }
+    .chefs-section .chefs-info {
+        flex-wrap: nowrap;
+        column-gap: 50px;
+    }
+    .chefs-section .chefs-info .chef {
+        margin: 0;
+    }
+    .gallery-section .photos {
+        height: 1000px;
+    }
+    .gallery-section .photos .photo {
+        width: 33%;
+    }
+    .photos .steaks {
+        order: 3; 
+    }
+    .photos .burger {
+        order: 5; 
+    }
+    .photos .levitation {
+        order: 2; 
+    }
+    .contact-section form #name, .contact-section form #email {
+        width: 49%;
+    }
+}
+@media screen and (min-width: 1100px) {
+    .home-section {
+        width: 95%;
+    }
+    .home-section {
+        padding-inline: 40px;
+    }
+    .hero-image {
+        width: 45%;
+        float: right;
+    }
+    .welcome-message {
+        transform: translateY(20%);
+    }
+    .gallery-section .photos {
+        height: 1200px;
+    }
+    footer {
+        padding-inline: 80px;
+        flex-wrap: nowrap;
+        justify-content: center;
+        column-gap: 20px;
+    }
+    .subscribe form input {
+        width: 70%;
+    }
+    .subscribe form button {
+        width: 29%;
+    }
+    .header-and-social {
+        order: 1;
+    }
+    .get-in-touch {
+        order: 3;
+    }
+    .subscribe {
+        order: 2;
+    }
+}
+@media screen and (min-width: 1250px) {
+    .home-section {
+        width: 90%;
+    }
+    .exit, .menu {
+        display: none;
+    }
+    .dark, .light {
+        margin-right: 70px;
+    }
+    .nav-links, .nav-links ul, .nav-links ul li {
+        all: unset;
+    }
+    body:has(#check-mode:checked) .nav-links {
+        background-color: unset;
+    }
+    .nav-logo {
+        width : 40%;
+    }
+    .nav-links {
+        float: left;
+        width: 40%;
+    }
+    .nav-links ul li {
+        margin-right: 30px;
+        display: inline-block;
+    }
+    .nav-links ul li a {
+        line-height: 90px;
+        display: block;
+        overflow: hidden;
+        position: relative;
+    }
+    .nav-links ul li a::after {
+        content: "";
+        position: absolute;
+        background-color: rgb(206, 18, 18);
+        width: 50px;
+        height: 2px;
+        bottom: 0;
+        top: 75%;
+        transform: translateX(-250%);
+        transition: 0.5s;
+    }
+    body:has(#home:target) nav a[href="#home"]::after, 
+    body:has(#chefs:target) nav a[href="#chefs"]::after,
+    body:has(#gallery:target) nav a[href="#gallery"]::after,
+    body:has(#contact:target) nav a[href="#contact"]::after,
+    body:not(:has(:target)) nav a[href="#home"]::after, 
+    .nav-links ul li a:hover::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    body:has(#home:target) nav a[href="#home"], 
+    body:has(#chefs:target) nav a[href="#chefs"],
+    body:has(#gallery:target) nav a[href="#gallery"],
+    body:has(#contact:target) nav a[href="#contact"],
+    body:not(:has(:target)) nav a[href="#home"] {
+        color: black;
+    }
+    .home-container {
+        height: 100vh;
+    }
+    .home-section {
+        width: 95%;
+        padding-inline: 40px;
+    }
+    .hero-image {
+        width: 40%;
+        float: right;
+    }
+    .welcome-message {
+        width: 40%;
+        float: left;
+        text-align: left;
+        transform: translateY(25%);
+    }
+    .home-buttons {
+        margin-left: 0;
+    }
+    .book-button {
+        border-top-left-radius: 0px;
+        margin-left: 0;
+    }
+    .gallery-section .photos {
+        height: 1300px;
+    }
+}

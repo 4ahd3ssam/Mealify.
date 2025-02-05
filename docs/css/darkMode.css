@@ -1,0 +1,144 @@
+.light, .dark {
+    color: black;
+    font-size: 30px;
+    line-height: 90px;
+    float: right;
+    margin-right: 25px;
+    cursor: pointer;
+}
+#check-mode {
+    display: none;
+}
+.light {
+    display: none;
+}
+#check-mode:checked ~ .mode .light {
+    display: block;
+}
+#check-mode:checked ~ .mode .dark {
+    display: none;
+}
+body:has(#check-mode:checked) nav {
+    background-color: rgb(20, 20, 20);
+}
+body:has(#check-mode:checked) nav .nav-logo a,  body:has(#check-mode:checked) nav i {
+    color: white;
+}
+body:has(#check-mode:checked) nav .nav-logo .dot-logo {
+    color: rgb(193, 126, 31);
+}
+body:has(#check-mode:checked) .nav-links {
+    background-color: rgb(40, 40, 40);
+}
+body:has(#check-mode:checked) .home-container {
+    background-color: rgb(40, 40, 40);
+}
+body:has(#check-mode:checked) .welcome-message h1 {
+    color: white;
+}
+body:has(#check-mode:checked) .welcome-message p {
+    color: rgb(159, 159, 159);
+}
+body:has(#check-mode:checked) .book-button a {
+    background-color: rgb(193, 126, 31);
+    color: rgb(23, 23, 23);
+}
+body:has(#check-mode:checked) .book-button, body:has(#check-mode:checked) .watch-button {
+    background-color: rgba(0, 0, 0, 0);
+}
+body:has(#check-mode:checked) .watch-button, body:has(#check-mode:checked) .watch-button i {
+    color: white;
+}
+body:has(#check-mode:checked) .watch-button .watch-icon {
+   background-color: rgb(17, 17, 17);
+}
+body:has(#check-mode:checked) .watch-button .border {
+    background-color: rgb(193, 126, 31);
+}
+body:has(#check-mode:checked) .watch-button .border::before {
+    background-color: rgb(40, 40, 40);
+}
+body:has(#check-mode:checked) .nav-links ul li a:hover, body:has(#check-mode:checked) .exit:hover {
+    color: white;
+}
+body:has(#check-mode:checked):has(#home:target) nav a[href="#home"], 
+body:has(#check-mode:checked):has(#chefs:target) nav a[href="#chefs"],
+body:has(#check-mode:checked):has(#gallery:target) nav a[href="#gallery"],
+body:has(#check-mode:checked):has(#contact:target) nav a[href="#contact"],
+body:has(#check-mode:checked):not(:has(:target)) nav a[href="#home"] {
+    color: white;
+}
+body:has(#check-mode:checked) .nav-links ul li a::after {
+    background-color: rgb(193, 126, 31);
+}
+body:has(#check-mode:checked) .watch-button a {
+    color: white;
+}
+body:has(#check-mode:checked) .watch-button:hover a, body:has(#check-mode:checked) .watch-button:hover i {
+    color: rgb(193, 126, 31);
+} 
+body:has(#check-mode:checked) .book-button a:hover {
+    background-color: rgb(212, 143, 45);
+}
+
+
+body:has(#check-mode:checked) .chefs-section {
+    background-color: rgb(33, 33, 33);
+}
+body:has(#check-mode:checked) .gallery-container {
+    background-color: rgb(23, 23, 23);
+}
+body:has(#check-mode:checked) .contact-section {
+    background-color: rgb(33, 33, 33);
+}
+body:has(#check-mode:checked) .chefs-section h2, 
+body:has(#check-mode:checked) .gallery-section h2,
+body:has(#check-mode:checked) .contact-section h2 {
+    color: rgb(159, 159, 159);
+}
+body:has(#check-mode:checked) .chefs-section h1, 
+body:has(#check-mode:checked) .gallery-section h1,
+body:has(#check-mode:checked) .contact-section h1 {
+    color: rgb(255, 255, 255);
+}
+body:has(#check-mode:checked) .chefs-section h1 span, 
+body:has(#check-mode:checked) .gallery-section h1 span,
+body:has(#check-mode:checked) .contact-section h1 span {
+    color: rgb(212, 143, 45);
+}
+body:has(#check-mode:checked) .chef .info h3 {
+    color: rgb(255, 255, 255);
+}
+body:has(#check-mode:checked) .chef .info,
+body:has(#check-mode:checked) .contact-info .info {
+    background-color: rgb(22, 22, 22);
+}
+body:has(#check-mode:checked) .chefs-section .chefs-info .chef .info::before {
+    background-image: url('https://alfaroukroute.github.io/Mealify/assets/img/team-shape-dark.svg');
+}
+body:has(#check-mode:checked) .contact-info .info p {
+    color: white;
+}
+body:has(#check-mode:checked) .contact-info .info .icon i {
+    color: rgb(20, 20, 20);
+}
+body:has(#check-mode:checked) .contact-info .info .icon,
+body:has(#check-mode:checked) .contact-section form button,
+body:has(#check-mode:checked) .subscribe form button {
+    background-color: rgb(212, 143, 45);
+    color:rgb(20, 20, 20);
+}
+body:has(#check-mode:checked) .contact-section form button:hover,
+body:has(#check-mode:checked) .subscribe form button:hover {
+    background-color: rgb(239, 170, 73);
+}
+body:has(#check-mode:checked) .contact-section form input, body:has(#check-mode:checked) .contact-section form textarea {
+    border: 2px solid black;
+}
+body:has(#check-mode:checked) .contact-section form input:focus, .contact-section form textarea:focus {
+    border: 2px solid rgb(212, 143, 45);
+}
+
+body:has(#check-mode:checked) .get-in-touch .links li i {
+    color: rgb(239, 170, 73);
+}

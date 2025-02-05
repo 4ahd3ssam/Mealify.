@@ -1,0 +1,621 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.clear-fix {
+    clear: both;
+}
+/*home section*/
+.home-container, .gallery-container {
+    background-color: rgb(241, 241, 241);
+}
+.home-container {
+    overflow: auto;
+}
+.home-section {
+    width: 95%;
+    margin: auto;
+    margin-top: 120px;
+}
+.welcome-message, .hero-image {
+    width: 100%;
+    text-align: center;
+    padding-block: 30px;
+}
+.hero-image img {
+    width: 100%;
+}
+@keyframes hero-image-animation {
+    0% {
+        transform: translate(-1px, 0) rotate(1deg);
+    }
+    25% {
+        transform: translate(0, -2px) rotate(-1deg);
+    }
+    50% {
+        transform: translate(0, 2px) rotate(1deg);
+    }
+    75% {
+        transform: translate(1px, 0) rotate(-1deg);
+    }
+    100% {
+        transform: translate(-1px, 0) rotate(1deg);
+    }
+}
+.hero-image img:hover {
+    animation: hero-image-animation 0.4s infinite;
+}
+.welcome-message h1 {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 65px;
+    font-weight: 700;
+    color: rgb(55, 55, 63);
+}
+.welcome-message p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(79, 79, 90);
+    margin-top: 20px;
+}
+.home-buttons {
+    width: fit-content;
+    margin: auto;
+}
+.home-buttons a {
+    text-decoration: none;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.book-button, .watch-button {
+    border: none;
+    display: block;
+    height: 60px;
+    margin: auto;
+    margin-top: 15px;
+}
+.book-button a {
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    display: block;
+    padding: 12px 25px;
+    background-color: rgb(206, 18, 18);
+    border-radius: 50px;
+    transition: 0.5s;
+}
+.book-button:hover a {
+    background-color: rgb(227, 25, 25);
+}
+.watch-button {
+    background-color: rgba(0, 0, 0, 0);
+    width: 170px;
+}
+.watch-button a {
+    color: rgb(33, 37, 41);
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
+    width: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+.watch-button .border {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    background-color: rgb(227, 25, 25);
+    border-radius: 50% 0 0 50%;
+}
+.watch-button .border::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 105%;
+    background-color: rgb(241, 241, 241);
+    left: 52%;
+    top: -2.5%;
+}
+.watch-button .watch-icon {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.watch-button .watch-icon i {
+    color:rgb(32, 32, 32);
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+}
+.watch-button .watch-hyper-link {
+    position: relative;
+    left: 30px;
+}
+.watch-button:hover a, .watch-button:hover i {
+    color: rgb(227, 25, 25);
+} 
+/*common*/
+.chefs-section h2, .gallery-section h2, .contact-section h2 {
+    font-size: 14px;
+    color: rgb(127, 127, 144);
+    font-weight: 400;
+    font-family: Inter, sans-serif;
+    text-align: center;
+}
+.chefs-section h1, .gallery-section h1, .contact-section h1 {
+    font-size: 50px;
+    color: rgb(33, 37, 41);
+    font-weight: 400;
+    font-family: "Amatic SC", sans-serif;
+    text-align: center;
+}
+.chefs-section h1 span, .gallery-section h1 span, .contact-section h1 span {
+    color: rgb(206, 18, 18);
+}
+/* chefs section */
+.chefs-section {
+    width: 100%;
+    overflow: auto;
+    padding-block: 80px 40px;
+}
+.chefs-section .chefs-info {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    padding-block: 50px;
+}
+.chefs-section .chefs-info .chef {
+    width: 90%;
+    margin-inline: 5%;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    transition: 0.5s;
+}
+.chef .info h3 {
+    color: rgb(33, 37, 41);
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    padding-block: 5px; 
+}
+.chef .info h4 {
+    color: rgb(127, 127, 144);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 14px;
+    font-weight: 400;
+    padding-block: 5px; 
+}
+.chef .info p {
+    color: rgb(127, 127, 144);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 15px;
+    font-weight: 400;
+    font-style: italic;
+    padding-block: 5px; 
+}
+.chefs-section .chefs-info .chef:hover {
+    transform: scale(1.1);
+}
+.chefs-section .chefs-info .chef img {
+    width: 100%;
+}
+.chefs-section .chefs-info .chef .info::before {
+    background-image: url('https://alfaroukroute.github.io/Mealify/assets/img/team-shape.svg');
+    content: "";
+    position: absolute;
+    top: -30%;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+}
+.chefs-section .chefs-info .chef .info {
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+.chef .layer {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: rgba(255, 255, 255, 0.326);
+    padding: 20px 10px;
+    border-radius: 10px;
+    transform: translateX(500%);
+    opacity: 0;
+    transition: 0.5s 0.5s;
+}
+.chef .layer i {
+    font-size: 20px;
+    color: rgb(140, 140, 140);
+}
+.chef .layer i:hover {
+    color: rgb(73, 73, 73);
+}
+.chefs-section .chefs-info .chef:hover .layer {
+    transform: translateX(0%);
+    opacity: 1;
+}
+/* gallery */
+.gallery-section {
+    padding-block: 80px;
+    width: 100%;
+}
+.gallery-section .photos {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding-top: 50px;
+}
+.gallery-section .photos img {
+    width: 100%;
+    display: block;
+}
+.gallery-section .photos .layer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.514);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: 0.5s;
+}
+.gallery-section .photos .photo {
+    width: 100%;
+    border: 4px solid white;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+.gallery-section .photos .photo:hover .layer {
+    opacity: 1;
+    transform: translateY(0);
+}
+.photos .photo h3 {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+}
+.photos .photo p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 400;
+    font-weight: 17px;
+    color: rgb(221, 221, 221);
+}
+.photos .pizza {
+    order: 1; 
+}
+.photos .steaks {
+    order: 5; 
+}
+.photos .burger {
+    order: 2; 
+}
+.photos .levitation {
+    order: 3; 
+}
+.photos .chicken {
+    order: 6; 
+}
+.photos .kebab {
+    order: 7; 
+}
+.photos .frittata {
+    order: 4; 
+}
+/* contact */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding-inline: 20px;
+    padding-block: 80px;
+}
+.contact-section .map {
+    width: 100%;
+    padding-top: 10px;
+}
+.contact-section .map iframe {
+    width: 100%;
+}
+.contact-section .contact-info {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    width: 100%;
+}
+.contact-info .info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    background-color: rgb(245, 245, 245);
+    padding: 30px;
+}
+.contact-info .info .icon {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(206, 18, 18);
+    border-radius: 50%;
+    position: relative;
+}
+.contact-info .info .icon i {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact-info .info .details h3 {
+    color: rgb(125, 125, 125);
+    font-family: Inter, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.contact-info .info .details p {
+    color: rgb(33, 37, 41);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+}
+.contact-info .hours .details p span {
+    font-weight: 700;
+}
+.contact-section form {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 10px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.08);
+    padding: 30px 10px;
+}
+.contact-section form input, .contact-section form textarea {
+    width: 100%;
+    border: 2px solid rgb(229, 229, 229);
+    padding: 15px 10px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(33, 37, 41);
+    font-size: 13px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.contact-section form textarea {
+    height: 100px;
+    margin-bottom: 20px;
+}
+.contact-section form input:focus, .contact-section form textarea:focus {
+    outline: none;
+    border: 2px solid rgb(206, 18, 18);
+}
+.contact-section form button {
+    border: none;
+    color: white;
+    background-color: rgb(206, 18, 18);
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.5s;
+    margin: auto;
+}
+.contact-section form button:hover {
+    cursor: pointer;
+    background-color:  rgb(227, 25, 25);
+}
+/* footer */
+footer {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/textured-metal-background.jpg');
+    background-size: contain;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 20px;
+    width: 100%;
+    padding: 40px 20px;
+}
+footer .foot {
+    width: 100%;
+}
+.header-and-social .icon {
+    width: 9%;
+}
+.header-and-social .icon img {
+    width: 100%;
+}
+.header-and-social .header {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.header-and-social .header h1 {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 30px;
+    font-weight: 700;
+}
+.header-and-social .header h1 span {
+    color: rgb(206, 18, 18);
+}
+.header-and-social p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+}
+.header-and-social .social-media {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.header-and-social .social-media h2 {
+    width: 100%;
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+.header-and-social .social-media h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 2px;
+    background-color: gray;
+}
+.header-and-social .social-media .icons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+.header-and-social .social-media .icons i {
+    font-size: 25px;
+    color: white;
+}
+.subscribe h1 {
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+}
+.subscribe p {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+}
+.subscribe form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10px;
+}
+.subscribe form input, .subscribe form button {
+    width: 100%;
+}
+.subscribe form input {
+    padding: 10px 15px;
+    font-family: Arial;
+    font-size: 13px;
+    font-weight: 400;
+}
+.subscribe form button {
+    color: white;
+    border: none;
+    background-color: rgb(206, 18, 18);
+    padding: 10px 15px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: 400;
+    transition: 0.5s;
+}
+.subscribe form button:hover {
+    cursor: pointer;
+    background-color: rgb(227, 25, 25);;
+}
+.subscribe .quick-links {
+    padding-top: 20px;
+}
+.subscribe .quick-links h2 {
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.subscribe .quick-links .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.subscribe .quick-links .icons div {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+.subscribe .quick-links .icons div a {
+    text-decoration: none;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding: 5px;
+    transition: 0.5s;
+}
+.subscribe .quick-links .icons div a:hover {
+    transform: translateX(5%);
+    background-color: rgba(124, 124, 124, 0.293);
+}
+.subscribe .quick-links .icons div a i {
+    font-size: 12px;
+    padding-right: 4px;
+}
+.get-in-touch h1 {
+    font-family: Inter, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 5px;
+}
+.get-in-touch .links ul {
+    list-style: none;
+    padding-left: 10px;
+}
+.get-in-touch .links li {
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    padding-block: 8px;
+}
+.get-in-touch .links li i {
+    color: rgb(206, 18, 18);
+    font-size: 20px;
+    padding-right: 4px;
+}

@@ -1,0 +1,95 @@
+body {
+    overflow-x: hidden;
+}
+nav {
+    height: 90px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+    z-index: 9999;
+}
+.nav-logo {
+    float: left;
+    padding-left: 70px;
+}
+.nav-logo a {
+    line-height: 90px;
+    text-decoration: none;
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    color: rgb(33, 37, 41);
+    font-weight: 700;
+    font-size: 30px;
+}
+.nav-logo a .dot-logo {
+    color: rgb(206, 18, 18); 
+}
+.menu {
+    color: black;
+    font-size: 25px;
+    line-height: 90px;
+    float: right;
+    margin-right: 70px;
+    cursor: pointer;
+}
+#check-icon {
+    display: none;
+}
+.exit {
+    display: none;
+}
+.nav-links {
+    background-color: white;
+    width: 60%;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    transition: 0.5s;
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,.2);
+    transform: translateX(100%);
+}
+.nav-links ul {
+    list-style: none;
+    float: left;
+    margin-top: 20px;
+}
+.nav-links ul li {
+    display: block;
+    margin-left: 20px;
+    margin-block: 40px;
+}
+.nav-links ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(125, 125, 125);
+    font-family: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    transition: 0.5s;
+}
+.exit {
+    display: none;
+    color: rgb(125, 125, 125); 
+    margin-inline: 40px;
+    margin-top: 15px;
+    font-size: 24px;
+    font-weight: 600;
+    position: absolute;
+    right: 0;
+    top: 10%;
+    z-index: 9999;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.nav-links ul li a:hover, .exit:hover {
+    color: black;
+}
+#check-icon:checked ~ .nav-links {
+    transform: translateX(0);
+}
+#check-icon:checked ~ .icon .exit {
+    display: block;
+}
+#check-icon:checked ~ .icon .menu {
+    display: none;
+}
